@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Page</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header.title-section {
+            background: #003366; /* Formal dark blue color */
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        header.title-section .authors-info {
+            margin-top: 10px;
+            color: #ffffff;
+        }
+
+        header.title-section .authors-info .authors {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
+
+        header.title-section .authors-info .affiliations {
+            font-style: italic;
+            font-size: 1em;
+            margin: 5px 0;
+        }
+
+        nav.navigation {
+            background: #00509E; /* Slightly lighter formal blue */
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        nav.navigation ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav.navigation ul li {
+            margin: 0 15px;
+        }
+
+        nav.navigation ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav.navigation ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .headline {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #d9534f; /* Bootstrap danger red */
+            margin: 20px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            border-bottom: 2px solid #003366;
+            padding-bottom: 10px;
+        }
+
+        a {
+            color: #00509E;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .image-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Styling for the Abstract section */
+        #abstract {
+            font-family: 'Georgia', serif;
+            color: #555555;
+            font-weight: 300;
+        }
+
+        /* Citation section */
+        #citation {
+            text-align: left;
+            background: #f5f5f5;
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            max-width: 600px;
+        }
+
+        .side-by-side {
+            display: flex;
+            gap: 20px;
+        }
+
+        #download, #code, #dataset {
+            flex: 1;
+        }
+
+        .download-image-container img {
+            width: 250px;
+            height: auto;
+            border: 4px solid #003366;
+            border-radius: 4px;
+        }
+
+        #contact p {
+            text-align: center;
+            font-family: 'Georgia', serif;
+            color: #555555; 
+            font-weight: 700;
+        }
+
+        #contact img {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            margin-top: 10px;
+            transition: transform 0.3s;
+        }
+
+        #contact img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <header class="title-section">
+        <h1>Strategic Base Representation Learning via Feature Augmentations for Few-Shot Class Incremental Learning</h1>
+        <div class="authors-info">
+            <p class="authors">
+                Parinita Nema, Vinod K Kurmi
+            </p>
+            <p class="affiliations">
+                Indian Institute of Science Education and Research Bhopal, India
+            </p>
+        </div>
+    </header>
+    
+    <nav class="navigation">
+        <ul>
+            <li><a href="#abstract">Abstract</a></li>
+            <li><a href="#download">Resources</a></li>
+            <li><a href="#citation">Citation</a></li>
+            <li><a href="#contact">Connect</a></li>
+        </ul>
+    </nav>
+
+    <div class="headline">
+        Accepted at IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) 2025!
+    </div>
+    
+    <main class="container">
+        <section id="abstract">
+            <h2>Abstract</h2>
+            <div class="image-container">
+                <a href="images/main.png" target="_blank">
+                    <img src="images/main.png" alt="Illustration">
+                </a>
+            </div>
+            <p>Few-shot class incremental learning implies the model to learn new classes while retaining knowledge of previously learned classes with a small number of training instances. Existing frameworks typically freeze the parameters of the previously learned classes during the incorporation of new classes. However, this approach often results in suboptimal class separation of previously learned classes, leading to overlap between old and new classes. Consequently, the performance of old classes degrades on new classes. To address these challenges, we propose a novel feature augmentation-driven contrastive learning framework designed to enhance the separation of previously learned classes to accommodate new classes. Our approach involves augmenting feature vectors and assigning proxy labels to these vectors. This strategy expands the feature space, ensuring seamless integration of new classes within the expanded space. Additionally, we employ a self-supervised contrastive loss to improve the separation between previous classes. We validate our framework through experiments on three FSCIL benchmark datasets: CIFAR100, miniImageNet, and CUB200. The results demonstrate that our Feature Augmentation driven Contrastive Learning framework significantly outperforms other approaches, achieving state-of-the-art performance.</p>
+        </section>
+        
+        <div class="side-by-side">
+            <section id="download">
+                <h2>Download</h2>
+                <div class="download-image-container">
+                    <a href="https://arxiv.org/abs/2407.19265" download>
+                        <img src="images/FsAC_Learning_page-0001.jpg" alt="Download Paper (PDF)">
+                    </a>
+                </div>
+            </section>
+            
+            <section id="code">
+                <h2>Code</h2>
+                <a href="https://github.com/riyansha/CIL-RepLearning">
+                        <img src="images/github_icon.png" alt="GitHub" class="icon">
+                </a>
+            </section>
+
+            <section id="dataset">
+                <h2>Dataset</h2>
+                <ul>
+                    <li><a href="https://www.openslr.org/12/">LibriSpeech</a></li>
+                    <li><a href="https://magenta.tensorflow.org/datasets/nsynth">NSynth</a></li>
+                    <li><a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/YDEPUT">ESC</a></li>
+                </ul>
+            </section>
+        </div>
+
+        <section id="citation">
+            <h2>Citation</h2>
+            <p>If you use this work, please cite:</p>
+            <pre>
+                @misc{nema2024strategic,
+                    title={Strategic Base Representation Learning via Feature Augmentations for Few-Shot Class Incremental Learning}, 
+                    author={Parinita Nema and Vinod K Kurmi},
+                    year={2025},
+                    eprint={2407.19265},
+                    archivePrefix={arXiv},
+                    primaryClass={cs.SD},
+                    url={https://arxiv.org/abs/2407.19265}, 
+                }
+            </pre>
+        </section>
+        
+        <section id="contact">
+            <h2>Connect</h2>
+            <p>Drop a query at  
+                <a href="https://github.com/VisDomLab/FsACLearning/issues">
+                    <img src="images/VisDom.png" alt="VisDom" class="icon">
+                </a>
+           </p>
+        </section>
+    </main>
+</body>
+</html>
+
