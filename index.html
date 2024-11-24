@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Page</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
     <style>
 
         body {
@@ -11,16 +13,18 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-        }
+            background-color: #f4f4f4;
+            }
 
         header.title-section {
-            background: #003366; /* Formal dark blue color */
+            background: #1d93e894;
             color: #ffffff;
             padding: 20px;
+            /* border-bottom: 4px solid #d64545b0; */
             text-align: center;
             width: 100%;
         }
+
 
         header.title-section .authors-info {
             margin-top: 10px;
@@ -39,10 +43,31 @@
             margin: 5px 0;
         }
 
+        header.title-section .authors-info sup {
+            font-size: 0.8em;
+            vertical-align: super;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .headline {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: red;
+            animation: blink 1s infinite;
+            margin: 20px 0;
+        }
+
         nav.navigation {
-            background: #00509E; /* Slightly lighter formal blue */
+            background: #50b3a2;
             padding: 10px 0;
-            width: 100%;
+            border-bottom: 1px solid #e0e0e0;
+            width: 103%;
         }
 
         nav.navigation ul {
@@ -67,14 +92,6 @@
             text-decoration: underline;
         }
 
-        .headline {
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-            color: #d9534f; /* Bootstrap danger red */
-            margin: 20px 0;
-        }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -90,12 +107,12 @@
         }
 
         section h2 {
-            border-bottom: 2px solid #003366;
+            border-bottom: 2px solid #e8491d;
             padding-bottom: 10px;
         }
 
         a {
-            color: #00509E;
+            color: #50b3a2;
             text-decoration: none;
         }
 
@@ -111,18 +128,19 @@
         .image-container img {
             max-width: 100%;
             height: auto;
+            /* border: 2px solid #e8491d; */
             border-radius: 8px;
         }
 
         /* Styling for the Abstract section */
         #abstract {
-            font-family: 'Georgia', serif;
-            color: #555555;
-            font-weight: 300;
+            font-family: 'Georgia', serif; /* Change to your preferred font family */
+            color: #555555; /* Lighter text color */
+            font-weight: 300; /* Lighter font weight */
         }
 
         /* Citation section */
-        #citation {
+        #citation{
             text-align: left;
             background: #f5f5f5;
             padding: 15px;
@@ -132,6 +150,36 @@
             max-width: 600px;
         }
 
+        #citation h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .citation-content {
+            font-size: 14px;
+            color: #333;
+            text-align: left;
+        }
+
+        .citation-note {
+            color: #555555; /* Change text color to grey */
+            font-family: 'Georgia', serif; /* Change font family to Georgia */
+            font-weight: 400; /* Increase font weight */
+        }
+
+        .citation-bibtex {
+            font-family: 'Courier New', monospace;
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            display: block;
+            text-align: left;
+            margin: 0; /* Center the box */
+            width: auto; /* Shrink the box to fit content */
+            max-width: 100%; /* Ensure it doesn't overflow the container */
+            white-space: pre-line;
+        }
+        /* Flexbox styling for side-by-side sections */
         .side-by-side {
             display: flex;
             gap: 20px;
@@ -141,18 +189,49 @@
             flex: 1;
         }
 
+        .download-image-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+
         .download-image-container img {
-            width: 250px;
-            height: auto;
-            border: 4px solid #003366;
+            width: 250px; /* Set the desired width */
+            height: auto; /* Maintain aspect ratio */
+            border: 4px solid #1dcde800;
             border-radius: 4px;
         }
 
+        /* Styling for GitHub icon */
+        .icon {
+            width: 250px;
+            height: auto;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+
+        #resources a, #dataset a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        #dataset a {
+            display: flex;
+            align-items: left;
+            justify-content: left;
+            text-align: left
+        }
+
+        /* #contact p { */
+           /* font-family: 'Georgia', serif; Change to your preferred font family */
+            /* color: #555555; Lighter text color */
+            /* font-weight: 300; Lighter font weight */
+        /* } */
         #contact p {
             text-align: center;
             font-family: 'Georgia', serif;
             color: #555555; 
-            font-weight: 700;
+            font-weight: 700
         }
 
         #contact img {
@@ -166,17 +245,20 @@
         #contact img:hover {
             transform: scale(1.1);
         }
+
+
     </style>
 </head>
 <body>
     <header class="title-section">
-        <h1>Strategic Base Representation Learning via Feature Augmentations for Few-Shot Class Incremental Learning</h1>
+        <h1>Towards Robust Few-shot Class Incremental Learning in Audio Classification
+            using Contrastive Representation</h1>
         <div class="authors-info">
             <p class="authors">
-                Parinita Nema, Vinod K Kurmi
+                Parinita Nema<sup>1</sup>, Vinod K Kurmi<sup>2</sup>
             </p>
             <p class="affiliations">
-                Indian Institute of Science Education and Research Bhopal, India
+                <sup>1</sup>IISER Bhopal
             </p>
         </div>
     </header>
@@ -190,19 +272,27 @@
         </ul>
     </nav>
 
+    <!-- Headline -->
     <div class="headline">
-        Accepted at IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) 2025!
+        Accepted in INTERSPEECH 2024!
     </div>
     
     <main class="container">
         <section id="abstract">
-            <h2>Abstract</h2>
+            <!-- <h2>Abstract</h2> -->
             <div class="image-container">
-                <a href="images/main.png" target="_blank">
-                    <img src="images/main.png" alt="Illustration">
+                <a href="images\main.png" target="_blank">
+                    <img src="images\main.png" alt= "During base training, we follow a two-stage process. Initially, the model undergoes training employing the contrastive loss
+                    function to seperate classes with minimum overlap. Subsequently, the model is trained utilizing the cross-entropy loss function to guide
+                    the optimization process towards better classification performance">
                 </a>
             </div>
-            <p>Few-shot class incremental learning implies the model to learn new classes while retaining knowledge of previously learned classes with a small number of training instances. Existing frameworks typically freeze the parameters of the previously learned classes during the incorporation of new classes. However, this approach often results in suboptimal class separation of previously learned classes, leading to overlap between old and new classes. Consequently, the performance of old classes degrades on new classes. To address these challenges, we propose a novel feature augmentation-driven contrastive learning framework designed to enhance the separation of previously learned classes to accommodate new classes. Our approach involves augmenting feature vectors and assigning proxy labels to these vectors. This strategy expands the feature space, ensuring seamless integration of new classes within the expanded space. Additionally, we employ a self-supervised contrastive loss to improve the separation between previous classes. We validate our framework through experiments on three FSCIL benchmark datasets: CIFAR100, miniImageNet, and CUB200. The results demonstrate that our Feature Augmentation driven Contrastive Learning framework significantly outperforms other approaches, achieving state-of-the-art performance.</p>
+            <p>In machine learning applications, gradual data ingress is common, especially in audio processing where incremental learning is vital for real-time analytics. Few-shot class-incremental
+                learning addresses challenges arising from limited incoming data. Existing methods often integrate additional train
+                able components or rely on a fixed embedding extractor post training on base sessions to mitigate concerns related
+                to catastrophic forgetting and the dangers of model overfitting. However, using cross-entropy loss alone during base session training is suboptimal for audio data. To address
+                this, we propose incorporating supervised contrastive learning to refine the representation space, enhancing discriminative power and leading to better generalization since it facilitates seamless integration of incremental classes, upon arrival. Experimental results on NSynth and LibriSpeech datasets
+                with 100 classes, as well as ESC dataset with 50 and 10 classes, demonstrate state-of-the-art performance.</p>
         </section>
         
         <div class="side-by-side">
@@ -210,7 +300,7 @@
                 <h2>Download</h2>
                 <div class="download-image-container">
                     <a href="https://arxiv.org/abs/2407.19265" download>
-                        <img src="images/FsAC_Learning_page-0001.jpg" alt="Download Paper (PDF)">
+                        <img src="images\FsAC_Learning_page-0001.jpg" alt="Download Paper (PDF)">
                     </a>
                 </div>
             </section>
@@ -218,7 +308,7 @@
             <section id="code">
                 <h2>Code</h2>
                 <a href="https://github.com/riyansha/CIL-RepLearning">
-                        <img src="images/github_icon.png" alt="GitHub" class="icon">
+                        <img src="images\github_icon.png" alt="GitHub" class="icon">
                 </a>
             </section>
 
@@ -231,32 +321,33 @@
                 </ul>
             </section>
         </div>
-
-        <section id="citation">
+        <section id ="Citation">
             <h2>Citation</h2>
-            <p>If you use this work, please cite:</p>
-            <pre>
-                @misc{nema2024strategic,
-                    title={Strategic Base Representation Learning via Feature Augmentations for Few-Shot Class Incremental Learning}, 
-                    author={Parinita Nema and Vinod K Kurmi},
-                    year={2025},
-                    eprint={2407.19265},
-                    archivePrefix={arXiv},
-                    primaryClass={cs.SD},
-                    url={https://arxiv.org/abs/2407.19265}, 
-                }
-            </pre>
-        </section>
-        
-        <section id="contact">
+            <div class="citation-content">
+                <p class="citation-note">If you use this work, please cite:</p>
+                <pre class="citation-bibtex">
+                    @misc{singh2024robustfewshotclassincremental,
+                        title={Towards Robust Few-shot Class Incremental Learning in Audio Classification using Contrastive Representation}, 
+                        author={Riyansha Singh and Parinita Nema and Vinod K Kurmi},
+                        year={2024},
+                        eprint={2407.19265},
+                        archivePrefix={arXiv},
+                        primaryClass={cs.SD},
+                        url={https://arxiv.org/abs/2407.19265}, 
+                    }
+                
+                </pre>
+            </div>
+        </div>
+                <section id="contact">
             <h2>Connect</h2>
+            <!-- <h2>Contact</h2> -->
             <p>Drop a query at  
                 <a href="https://github.com/VisDomLab/FsACLearning/issues">
-                    <img src="images/VisDom.png" alt="VisDom" class="icon">
+                    <img src="images\VisDom.png" alt="VisDom" class="icon">
                 </a>
            </p>
         </section>
     </main>
 </body>
 </html>
-
